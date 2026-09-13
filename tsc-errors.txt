@@ -1,0 +1,6 @@
+app/(public)/avis-clients/page.tsx(185,13): error TS2719: Type 'Category' is not assignable to type 'Category'. Two different types with this name exist, but they are unrelated.
+  Type '"Voiture"' is not assignable to type 'Category'. Did you mean '"Voitures"'?
+app/(public)/avis-clients/page.tsx(186,13): error TS2322: Type 'Dispatch<SetStateAction<Category>>' is not assignable to type '(cat: Category) => void'.
+  Types of parameters 'value' and 'cat' are incompatible.
+    Type 'Category' is not assignable to type 'SetStateAction<Category>'.
+      Type '"Voitures"' is not assignable to type 'SetStateAction<Category>'. Did you mean '"Voiture"'?

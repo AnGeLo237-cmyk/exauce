@@ -2,13 +2,14 @@
 
 import { LocalizedText, useClientTranslation } from "@/lib/translation";
 
-type Category = "Toutes" | "Voitures" | "Meubles" | "Électroménagers";
+// ✅ Singulier pour correspondre aux données mock
+type Category = "Toutes" | "Voiture" | "Meuble" | "Électroménager";
 type SortOption = "recent" | "oldest" | "rating" | "useful";
 
 type ReviewFiltersProps = {
   selectedCategory: Category;
   setSelectedCategory: (cat: Category) => void;
-  selectedRating: number; // 0 = toutes, 3, 4, 5
+  selectedRating: number;
   setSelectedRating: (rating: number) => void;
   sortBy: SortOption;
   setSortBy: (sort: SortOption) => void;
@@ -16,8 +17,8 @@ type ReviewFiltersProps = {
   setSearchTerm: (term: string) => void;
 };
 
-const categories: Category[] = ["Toutes", "Voitures", "Meubles", "Électroménagers"];
-const ratingOptions = [0, 5, 4, 3]; // 0 = toutes
+const categories: Category[] = ["Toutes", "Voiture", "Meuble", "Électroménager"];
+const ratingOptions = [0, 5, 4, 3];
 const sortOptions: { value: SortOption; label: string }[] = [
   { value: "recent", label: "Plus récents" },
   { value: "oldest", label: "Plus anciens" },
