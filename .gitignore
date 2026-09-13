@@ -1,0 +1,81 @@
+# ============================================
+# Dépendances (reconstruites par Vercel)
+# ============================================
+node_modules
+.pnp
+.pnp.js
+
+# ============================================
+# Build local (Vercel reconstruit tout)
+# ============================================
+.next
+out
+build
+dist
+coverage
+
+# ============================================
+# Configuration locale Vercel
+# ============================================
+.vercel
+
+# ============================================
+# Environnement (à configurer dans Vercel)
+# ============================================
+.env
+.env.local
+.env*.local
+.env.production
+
+# ============================================
+# TypeScript (auto-généré)
+# ============================================
+*.tsbuildinfo
+next-env.d.ts
+
+# ============================================
+# Débogage / Logs
+# ============================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ============================================
+# Systèmes d'exploitation
+# ============================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ============================================
+# Éditeurs / IDE
+# ============================================
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# ============================================
+# Fichiers générés par vos scripts
+# ============================================
+texts-inventory.json
+forms-inventory.json
+
+# ============================================
+# Scripts de développement (non nécessaires en prod)
+# ============================================
+scripts/collect-texts.ts
+scripts/apply-overrides.ts
+scripts/find-forms.ts
+scripts/check-interactions.ts
+
+# ============================================
+# Documentation / Divers
+# ============================================
+README.md
+CHANGELOG.md
+LICENSE
+*.md
