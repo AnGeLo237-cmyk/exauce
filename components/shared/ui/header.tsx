@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "@/components/shared/ui/theme/theme-toggle";
 import LanguageSwitcher from "@/components/shared/ui/language/language-switcher";
 import { useClientTranslation } from "@/lib/translation";
@@ -18,7 +19,13 @@ const navItems = [
   { href: "/contact", label: "Contact" },
 ];
 
-// Composant NavItem avec traduction automatique
+// Vérifie si un lien est actif (exact ou préfixe pour les sous-routes)
+function isLinkActive(pathname: string, href: string): boolean {
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(href + "/");
+}
+
+// Composant NavItem avec traduction automatique + état actif animé
 function NavItem({
   href,
   label,
@@ -31,15 +38,52 @@ function NavItem({
   mobile?: boolean;
 }) {
   const { translated } = useClientTranslation(label);
+  const pathname = usePathname();
+  const isActive = isLinkActive(pathname, href);
+
+  // Version mobile : barre latérale colorée à gauche
+  if (mobile) {
+    return (
+      <Link
+        href={href}
+        onClick={onClick}
+        className={`relative flex items-center justify-center px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+          isActive
+            ? "text-primary bg-primary/10 font-semibold"
+            : "text-text hover:text-primary hover:bg-surface"
+        }`}
+      >
+        {/* Indicateur latéral animé */}
+        <span
+          className={`absolute left-0 top-1/2 -translate-y-1/2 h-6 w-1 rounded-r-full bg-primary transition-all duration-300 ${
+            isActive ? "opacity-100 scale-100" : "opacity-0 scale-50"
+          }`}
+          aria-hidden="true"
+        />
+        {translated}
+      </Link>
+    );
+  }
+
+  // Version desktop : soulignement animé sous le libellé
   return (
     <Link
       href={href}
       onClick={onClick}
-      className={`block px-3 py-2 rounded-md text-base font-medium text-text hover:text-primary hover:bg-surface transition-colors ${
-        mobile ? "text-center" : ""
+      className={`relative px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${
+        isActive
+          ? "text-primary font-semibold"
+          : "text-text hover:text-primary hover:bg-surface"
       }`}
     >
       {translated}
+      {/* Soulignement animé */}
+      <span
+        className={`absolute left-3 right-3 -bottom-0.5 h-0.5 rounded-full bg-primary origin-left transition-transform duration-300 ease-out ${
+          isActive ? "scale-x-100" : "scale-x-0"
+        }`}
+        aria-hidden="true"
+      />
     </Link>
   );
 }
@@ -67,13 +111,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo et titre */}
           <div className="flex items-center">
-            <Image
-              src="/images/logo.ico"
-              alt="Logo"
-              width={40}
-              height={40}
-              className="h-19 w-auto"
-            />
+            <Link href="/" aria-label="Accueil">
+              <Image
+                src="/images/logo.ico"
+                alt="Logo"
+                width={40}
+                height={40}
+                className="h-19 w-auto transition-transform duration-300 hover:scale-105"
+              />
+            </Link>
           </div>
 
           {/* Navigation desktop */}
