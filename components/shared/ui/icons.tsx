@@ -129,6 +129,14 @@ export const Icons = {
       <polyline points="22,6 12,13 2,6" />
     </svg>
   ),
+  handshake: (className?: string) => (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M11 17l-2-2a2 2 0 0 1 0-3l2-2" />
+      <path d="M13 7l2 2a2 2 0 0 1 0 3l-2 2" />
+      <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6" />
+      <path d="M2 12l5-5 5 5 5-5 5 5" />
+    </svg>
+  ),  
   // Ajoutez d'autres icônes si nécessaire
 } as const;
 

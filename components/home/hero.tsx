@@ -51,6 +51,13 @@ const slides: Slide[] = [
   },
 ];
 
+// Badges internationaux affichés en permanence
+const globalBadges = [
+  { label: "Chine" },
+  { label: "Turquie" },
+  { label: "12 pays desservis" },
+];
+
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -72,7 +79,6 @@ const HeroSection = () => {
   const handleMouseEnter = () => setIsAutoPlaying(false);
   const handleMouseLeave = () => setIsAutoPlaying(true);
 
-  // Extraire les textes dynamiques pour garantir qu'ils soient des chaînes
   const currentSlide = slides[currentIndex];
   const badgeText = currentSlide.badge;
   const titleText = currentSlide.title;
@@ -104,7 +110,7 @@ const HeroSection = () => {
               priority={index === 0}
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/85 via-secondary/65 to-transparent" />
           </div>
         ))}
       </div>
@@ -112,36 +118,46 @@ const HeroSection = () => {
       {/* Contenu texte et CTA */}
       <div className="relative z-10 flex items-center h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl text-white">
-          {/* Badge promotionnel - sur une seule ligne */}
+          {/* Badge promotionnel */}
           <div className="inline-block bg-accent/90 text-secondary font-semibold text-sm px-4 py-2 rounded-full mb-4 shadow">
             <LocalizedText>{badgeText}</LocalizedText>
           </div>
 
-          {/* Titre - sur une seule ligne */}
+          {/* Titre */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
             <LocalizedText>{titleText}</LocalizedText>
           </h1>
 
-          {/* Description - sur une seule ligne */}
-          <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-xl">
+          {/* Description */}
+          <p className="text-lg sm:text-xl text-white/85 mb-6 max-w-xl">
             <LocalizedText>{descriptionText}</LocalizedText>
           </p>
+
+          {/* Badges internationaux */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {globalBadges.map((badge, index) => (
+              <span
+                key={index}
+                className="inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 py-1 text-xs font-medium text-white"
+              >
+                <LocalizedText>{badge.label}</LocalizedText>
+              </span>
+            ))}
+          </div>
 
           {/* Boutons d'appel à l'action */}
           <div className="flex flex-wrap gap-4">
             <Link
               href="/catalogue"
-              className=" cursor-pointer star-pulse bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-              onClick={() => console.log("Shop now")}
+              className="cursor-pointer star-pulse bg-primary hover:bg-primary-hover text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               <LocalizedText>Consulter nos produits</LocalizedText>
             </Link>
             <Link
               href="/a-propos"
               className="cursor-pointer bg-transparent border-2 border-white hover:bg-white hover:text-secondary text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              onClick={() => console.log("Learn more")}
             >
-              <LocalizedText>En savoir plus</LocalizedText>
+              <LocalizedText>Découvrir notre activité</LocalizedText>
             </Link>
           </div>
         </div>
@@ -158,7 +174,7 @@ const HeroSection = () => {
                 ? "bg-accent scale-125"
                 : "bg-white/50 hover:bg-white/80"
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Aller au slide ${index + 1}`}
             aria-current={index === currentIndex}
           />
         ))}

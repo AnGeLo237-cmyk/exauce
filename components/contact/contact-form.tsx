@@ -4,10 +4,38 @@ import { useState } from "react";
 import { LocalizedText, useClientTranslation } from "@/lib/translation";
 import FormFeedback from "@/components/shared/ui/form/form-feedback";
 
+// Les 12 pays de vente + Autre
+const SALE_COUNTRIES = [
+  "Cameroun",
+  "RDC",
+  "Guinée Conakry",
+  "Congo Brazzaville",
+  "Gabon",
+  "Haïti",
+  "Sénégal",
+  "Burkina Faso",
+  "Côte d'Ivoire",
+  "Tchad",
+  "Togo",
+  "Mali",
+  "Autre",
+];
+
+// Sujets enrichis pour le contexte international
+const SUBJECTS = [
+  "Question sur un produit",
+  "Demande de devis",
+  "Suivi de commande internationale",
+  "Service après-vente",
+  "Devenir partenaire / revendeur",
+  "Autre",
+];
+
 type ContactFormProps = {
   onSubmit?: (formData: {
     name: string;
     email: string;
+    country: string;
     subject: string;
     message: string;
   }) => void;
@@ -16,20 +44,25 @@ type ContactFormProps = {
 export default function ContactForm({ onSubmit }: ContactFormProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("Question sur un produit");
+  const [country, setCountry] = useState(SALE_COUNTRIES[0]);
+  const [subject, setSubject] = useState(SUBJECTS[0]);
   const [message, setMessage] = useState("");
   const [accepted, setAccepted] = useState(false);
 
-  // Traductions pour les placeholders
   const { translated: namePlaceholder } = useClientTranslation("Votre nom complet");
   const { translated: emailPlaceholder } = useClientTranslation("votre.email@exemple.com");
   const { translated: messagePlaceholder } = useClientTranslation("Écrivez votre message ici...");
 
   return (
     <div className="bg-surface border border-border rounded-lg p-6 shadow-sm">
-      <h3 className="text-xl font-bold text-text mb-4">
+      <h3 className="text-xl font-bold text-text mb-2">
         <LocalizedText>Envoyez-nous un message</LocalizedText>
       </h3>
+      <p className="text-sm text-text-muted mb-4">
+        <LocalizedText>
+          Notre équipe internationale vous répond sous 24-48h.
+        </LocalizedText>
+      </p>
       <FormFeedback />
 
       <form className="space-y-4">
@@ -66,6 +99,32 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           </div>
         </div>
 
+        {/* Pays */}
+        <div>
+          <label htmlFor="contact-country" className="block text-sm font-medium text-text mb-1">
+            <LocalizedText>Pays</LocalizedText>
+          </label>
+          <select
+            id="contact-country"
+            name="country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            required
+            className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-text focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >
+            {SALE_COUNTRIES.map((c) => (
+              <option key={c} value={c}>
+                {c === "Autre" ? (
+                  <LocalizedText>Autre pays</LocalizedText>
+                ) : (
+                  c
+                )}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Sujet */}
         <div>
           <label htmlFor="contact-subject" className="block text-sm font-medium text-text mb-1">
             <LocalizedText>Sujet</LocalizedText>
@@ -77,13 +136,15 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
             onChange={(e) => setSubject(e.target.value)}
             className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-text focus:outline-none focus:ring-2 focus:ring-primary/50"
           >
-            <option value="Question sur un produit"><LocalizedText>Question sur un produit</LocalizedText></option>
-            <option value="Demande de devis"><LocalizedText>Demande de devis</LocalizedText></option>
-            <option value="Service après-vente"><LocalizedText>Service après-vente</LocalizedText></option>
-            <option value="Autre"><LocalizedText>Autre</LocalizedText></option>
+            {SUBJECTS.map((s) => (
+              <option key={s} value={s}>
+                <LocalizedText>{s}</LocalizedText>
+              </option>
+            ))}
           </select>
         </div>
 
+        {/* Message */}
         <div>
           <label htmlFor="contact-message" className="block text-sm font-medium text-text mb-1">
             <LocalizedText>Message</LocalizedText>
@@ -100,6 +161,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
           />
         </div>
 
+        {/* Acceptation */}
         <div className="flex items-center gap-2">
           <input
             type="checkbox"

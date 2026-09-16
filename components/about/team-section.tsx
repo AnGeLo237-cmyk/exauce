@@ -5,78 +5,105 @@ import Image from "next/image";
 import { LocalizedText } from "@/lib/translation";
 
 // ================================================================
-// 10 MEMBRES DU PERSONNEL — services clés pour rassurer les clients
+// 10 MEMBRES — répartition internationale (Shanghai, Dubaï, Afrique)
 // ================================================================
 const teamMembers = [
+  // Direction
   {
     name: "M. Emmanuel Ngo Bassong",
     role: "Directeur Général",
     department: "Direction",
-    photo: "/images/staff/staff-1.jfif",
-    quote: "Notre mission est de rendre l'excellence accessible à tous les Camerounais.",
+    location: "Shanghai",
+    flag: "🇨🇳",
+    photo: "/images/staff/emmanuel-ngo-bassong.jpg",
+    quote: "Notre mission est de rendre l'excellence accessible à tous.",
   },
+  // Opérations Chine
+  {
+    name: "Mme Li Wei",
+    role: "Responsable Bureau Shanghai",
+    department: "Opérations Chine",
+    location: "Shanghai",
+    flag: "🇨🇳",
+    photo: "/images/staff/li-wei.jpg",
+    quote: "Nous sélectionnons chaque fournisseur avec la plus grande rigueur.",
+  },
+  {
+    name: "M. Chen Hao",
+    role: "Responsable Qualité Chine",
+    department: "Qualité",
+    location: "Shanghai",
+    flag: "🇨🇳",
+    photo: "/images/staff/chen-hao.jpg",
+    quote: "Aucun produit ne quitte Shanghai sans un contrôle minutieux.",
+  },
+  // Opérations Dubaï
+  {
+    name: "M. Ahmed Al-Mansouri",
+    role: "Responsable Bureau Dubaï",
+    department: "Opérations Dubaï",
+    location: "Dubaï",
+    flag: "🇦🇪",
+    photo: "/images/staff/ahmed-al-mansouri.jpg",
+    quote: "Notre hub de Dubaï est la plaque tournante vers l'Afrique et la Caraïbe.",
+  },
+  {
+    name: "Mme Fatima Al-Zahra",
+    role: "Responsable Logistique Internationale",
+    department: "Logistique",
+    location: "Dubaï",
+    flag: "🇦🇪",
+    photo: "/images/staff/fatima-al-zahra.jpg",
+    quote: "Chaque expédition est suivie de bout en bout jusqu'à votre porte.",
+  },
+  // Achats Turquie
+  {
+    name: "M. Mehmet Yilmaz",
+    role: "Responsable Achats Turquie",
+    department: "Achats Internationaux",
+    location: "Istanbul",
+    flag: "🇹🇷",
+    photo: "/images/staff/mehmet-yilmaz.jpg",
+    quote: "Nos partenariats turcs garantissent des produits authentiques et durables.",
+  },
+  // Commercial Afrique
   {
     name: "Mme Clarisse Abena",
-    role: "Assistante de direction",
-    department: "Direction",
-    photo: "/images/staff/staff-2.jfif",
-    quote: "Votre satisfaction est primordiale.",
-  },
-  {
-    name: "M. Serge Owona",
-    role: "Responsable Import-Export",
-    department: "Import-Export",
-    photo: "/images/staff/staff-3.jfif",
-    quote: "Nos partenariats en Chine et en Turquie garantissent des produits authentiques.",
-  },
-  {
-    name: "Mme Patricia Tsafack",
-    role: "Directrice Commerciale",
+    role: "Directrice Commerciale Afrique",
     department: "Commercial",
-    photo: "/images/staff/staff-4.jfif",
+    location: "Douala",
+    flag: "🇨🇲",
+    photo: "/images/staff/clarisse-abena.jpg",
     quote: "Chaque client mérite une écoute attentive et une offre sur mesure.",
   },
   {
-    name: "M. André Fotso",
-    role: "Responsable Logistique",
-    department: "Logistique",
-    photo: "/images/staff/staff-5.jfif",
-    quote: "De l'usine à votre porte, chaque étape est suivie avec rigueur.",
+    name: "M. Serge Owona",
+    role: "Responsable Relations Clients",
+    department: "Service Client",
+    location: "Douala",
+    flag: "🇨🇲",
+    photo: "/images/staff/serge-owona.jpg",
+    quote: "Nous accompagnons nos clients dans toute l'Afrique et la Caraïbe.",
   },
+  // SAV
   {
-    name: "Mme Bernadette Nkoulou",
-    role: "Responsable Qualité",
-    department: "Qualité",
-    photo: "/images/staff/staff-6.jfif",
-    quote: "Aucun produit ne quitte notre entrepôt sans un contrôle minutieux.",
-  },
-  {
-    name: "M. Paul Etoundi",
-    role: "Responsable de la cellule informatique",
-    department: "Informatique",
-    photo: "/images/staff/staff-7.jfif",
-    quote: "Nos plateformes en ligne opérationnelles sont à votre service.",
-  },
-  {
-    name: "Mme Sandrine Kamga",
-    role: "Chef du service Après-Vente",
+    name: "Mme Patricia Mbarga",
+    role: "Responsable Service Après-Vente",
     department: "SAV",
-    photo: "/images/staff/staff-8.jfif",
-    quote: "Nous restons à vos côtés bien après l'achat, c'est notre engagement.",
+    location: "Douala",
+    flag: "🇨🇲",
+    photo: "/images/staff/patricia-mbarga.jpg",
+    quote: "Nous restons à vos côtés bien après l'achat, dans chaque pays.",
   },
+  // Finance
   {
     name: "M. Thomas Ndzana",
     role: "Responsable Financier",
     department: "Finance",
-    photo: "/images/staff/staff-9.jfif",
+    location: "Dubaï",
+    flag: "🇦🇪",
+    photo: "/images/staff/thomas-ndzana.jpg",
     quote: "Des transactions transparentes et sécurisées, du devis à la livraison.",
-  },
-  {
-    name: "Mme Yolande Mefire",
-    role: "Responsable Communication",
-    department: "Communication",
-    photo: "/images/staff/staff-10.jfif",
-    quote: "Nous rendons chaque étape de votre achat claire et rassurante.",
   },
 ];
 
@@ -96,7 +123,7 @@ export default function TeamSection() {
     return () => clearInterval(interval);
   }, [isPaused]);
 
-  // Effet tilt magnétique sur la carte centrale
+  // Effet tilt magnétique
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -128,9 +155,6 @@ export default function TeamSection() {
     setImageErrors((prev) => new Set(prev).add(index));
   };
 
-  // ================================================================
-  // Calcul du style pour chaque carte (Cover Flow 3D)
-  // ================================================================
   const getCardStyle = (index: number): React.CSSProperties => {
     const total = teamMembers.length;
     let diff = (index - currentIndex + total) % total;
@@ -185,23 +209,22 @@ export default function TeamSection() {
       filter: `blur(${blur})`,
       zIndex,
       transition: "all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1)",
-      pointerEvents: diff === 0 ? "auto" : "auto",
+      pointerEvents: "auto",
       cursor: diff === 0 ? "default" : "pointer",
     };
   };
 
   return (
     <section className="mb-16 py-8 overflow-hidden">
-      {/* En-tête */}
       <div className="max-w-6xl mx-auto px-4 mb-10">
         <h2 className="text-2xl md:text-3xl font-bold text-text">
           <LocalizedText>Notre équipe</LocalizedText>
         </h2>
         <p className="mt-2 text-sm md:text-base text-text-muted max-w-2xl">
           <LocalizedText>
-            Une équipe pluridisciplinaire engagée pour vous offrir des produits
-            authentiques importés de Chine et de Turquie, et un service irréprochable
-            au Cameroun.
+            Une équipe internationale basée à Shanghai, Dubaï et Douala, engagée
+            pour vous offrir des produits authentiques importés de Chine et de
+            Turquie et un service irréprochable dans 12 pays.
           </LocalizedText>
         </p>
       </div>
@@ -243,20 +266,21 @@ export default function TeamSection() {
                     </div>
                   )}
 
-                  {/* Badge département */}
+                  {/* Badge département + localisation */}
                   <div
-                    className={`absolute top-4 left-4 text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded transition-all duration-500 z-20 ${
+                    className={`absolute top-4 left-4 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded transition-all duration-500 z-20 ${
                       isCenter
                         ? "bg-primary/10 text-primary"
                         : "bg-border/40 text-text-muted"
                     }`}
                   >
-                    <LocalizedText>{member.department}</LocalizedText>
+                    <span aria-hidden="true">{member.flag}</span>
+                    <LocalizedText>{member.location}</LocalizedText>
                   </div>
 
                   {/* Photo / Avatar */}
                   <div
-                    className={`relative flex-shrink-0 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 transition-all duration-700 mt-4 ${
+                    className={`relative flex-shrink-0 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 transition-all duration-700 mt-6 ${
                       isCenter
                         ? "border-primary shadow-lg shadow-primary/30 scale-105"
                         : "border-border"
@@ -301,6 +325,9 @@ export default function TeamSection() {
                     <p className="text-sm text-primary font-medium mt-1">
                       <LocalizedText>{member.role}</LocalizedText>
                     </p>
+                    <p className="text-[10px] text-text-muted uppercase tracking-wider mt-1">
+                      <LocalizedText>{member.department}</LocalizedText>
+                    </p>
                     <div
                       className={`mt-3 px-4 py-2 rounded-lg transition-all duration-700 w-full ${
                         isCenter
@@ -314,7 +341,7 @@ export default function TeamSection() {
                     </div>
                   </div>
 
-                  {/* Effet de lumière glissante sur la carte centrale */}
+                  {/* Effet de lumière glissante */}
                   {isCenter && (
                     <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
                       <div className="absolute -inset-full w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-shimmer" />
@@ -326,7 +353,7 @@ export default function TeamSection() {
           })}
         </div>
 
-        {/* Flèches de navigation */}
+        {/* Flèches */}
         <button
           onClick={prev}
           className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-30 bg-surface/80 backdrop-blur-sm border border-border rounded-full p-3 hover:bg-primary/10 hover:scale-110 transition-all duration-300 shadow-lg"
@@ -346,13 +373,11 @@ export default function TeamSection() {
           </svg>
         </button>
 
-        {/* Compteur et points indicateurs (adaptés pour 10 éléments) */}
+        {/* Compteur + points */}
         <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-3 pb-4">
-          {/* Compteur */}
           <div className="text-xs font-semibold text-text-muted bg-surface/80 backdrop-blur-sm border border-border rounded-full px-3 py-1">
             {currentIndex + 1} / {teamMembers.length}
           </div>
-          {/* Points indicateurs plus compacts */}
           <div className="flex items-center gap-1.5 max-w-[90vw] overflow-x-auto px-2 scrollbar-hide">
             {teamMembers.map((_, idx) => (
               <button
