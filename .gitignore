@@ -71,6 +71,19 @@ scripts/collect-texts.ts
 scripts/apply-overrides.ts
 scripts/find-forms.ts
 scripts/check-interactions.ts
+scripts/check-slug.ts
+scripts/build-mapping.ts
+scripts/apply-overrides.ts
+scripts/clean-overrides.ts
+scripts/diagnose-images.ts
+scripts/diagnose-detailed.ts
+scripts/fix-image-mapping-v2.ts
+scripts/fix-image-mapping.ts
+scripts/generate-mapping.ts
+scripts/final-mapping.ts
+scripts/rename-files.ts
+scripts/build-mapping-v3.ts
+
 
 # ============================================
 # Documentation / Divers

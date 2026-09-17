@@ -25,7 +25,7 @@ const products: Product[] = [
     category: "Voitures",
     price: 30000000, // 30 000 000 FCFA
     rating: 4.8,
-    image: "/images/products/Toyota.jpg",
+    image: "/images/products/toyota.jpg",
     href: "/catalogue",
   },
   {
@@ -34,7 +34,7 @@ const products: Product[] = [
     category: "Meubles",
     price: 850000, // 850 000 FCFA
     rating: 4.5,
-    image: "/images/products/Couch.jpg",
+    image: "/images/products/couch.jpg",
     href: "/catalogue",
   },
   {
@@ -43,7 +43,7 @@ const products: Product[] = [
     category: "Appareils électroménagers",
     price: 1200000, // 1 200 000 FCFA
     rating: 4.7,
-    image: "/images/products/Freezer.jpg",
+    image: "/images/products/freezer.jpg",
     href: "/catalogue",
   },
   {
@@ -52,7 +52,7 @@ const products: Product[] = [
     category: "Voitures",
     price: 25000000, // 25 000 000 FCFA
     rating: 4,
-    image: "/images/products/Hyundai.jpeg",
+    image: "/images/products/hyundai.jpg",
     href: "/catalogue",
   },
 ];
