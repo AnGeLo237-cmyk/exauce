@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     name: "M. Chen Hao",
-    role: "Responsable Qualité Chine",
+    role: "Responsable Qualité",
     department: "Qualité",
     location: "Shanghai",
     flag: "🇨🇳",
@@ -59,7 +59,7 @@ const teamMembers = [
   // Achats Turquie
   {
     name: "M. Mehmet Yilmaz",
-    role: "Responsable Achats Turquie",
+    role: "Responsable Achats",
     department: "Achats Internationaux",
     location: "Istanbul",
     flag: "🇹🇷",
@@ -69,7 +69,7 @@ const teamMembers = [
   // Commercial Afrique
   {
     name: "Mme Clarisse Abena",
-    role: "Directrice Commerciale Afrique",
+    role: "Directrice Commerciale",
     department: "Commercial",
     location: "Douala",
     flag: "🇨🇲",
