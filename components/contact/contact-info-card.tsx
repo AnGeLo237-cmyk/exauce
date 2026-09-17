@@ -40,7 +40,7 @@ const HUBS = [
   {
     city: "Shanghai",
     country: "Chine",
-    role: "Centre logistique & d'approvisionnement",
+    role: "Centre logistique & d'approvisionnement principal",
     address: "Dans Delta du Yangtsé (Chine orientale)",
     hours: "Lun - Sam · 9h - 18h (CST)",
     accentColor: "from-red-500/20 to-red-500/0",

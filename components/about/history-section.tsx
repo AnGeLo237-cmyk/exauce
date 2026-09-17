@@ -17,7 +17,7 @@ const hubs = [
   {
     city: "Shanghai",
     country: "Chine",
-    role: "Bureau logistique & centre d'approvisionnement",
+    role: "Centre logistique et d'approvisionnement principal",
   },
   {
     city: "Dubaï",
