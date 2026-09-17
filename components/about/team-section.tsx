@@ -77,7 +77,7 @@ const teamMembers = [
     quote: "Chaque client mérite une écoute attentive et une offre sur mesure.",
   },
   {
-    name: "M. Serge Owona",
+    name: "Mme Sophia Owona",
     role: "Responsable Relations Clients",
     department: "Service Client",
     location: "Douala",
