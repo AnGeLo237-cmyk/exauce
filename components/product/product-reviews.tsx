@@ -2,12 +2,14 @@
 
 import { LocalizedText } from "@/lib/translation";
 import ReviewCard from "@/components/shared/ui/review-card";
-import { CardReveal } from "../shared/ux/animations";
+import { CardReveal } from "@/components/shared/ux/animations";
 
+// Type local (compatible avec ReviewCard)
 type Review = {
   id: number;
   name: string;
-  location: string;
+  location: string;   // Ville
+  country: string;    // ⚠️ Champ requis par ReviewCard
   rating: number;
   date: string;
   category: string;
@@ -16,40 +18,43 @@ type Review = {
   initials: string;
 };
 
-// Avis fictifs pour la démonstration (à remplacer par des données réelles)
+// Avis fictifs pour la fiche produit (adapte le pays selon ton contexte)
 const getMockReviews = (productName: string): Review[] => [
   {
     id: 1,
     name: "Marie Ngo Bassa",
-    location: "Douala, Cameroun",
+    location: "Douala",
+    country: "Cameroun",
     rating: 5,
     date: "2025-03-15",
     category: "Produit",
     product: productName,
-    text: "Très satisfaite de mon achat, c'est de la qualité.",
+    text: "Très satisfaite de mon achat, la qualité est au rendez-vous. Livraison rapide.",
     initials: "MB",
   },
   {
     id: 2,
     name: "Jean-Paul Mballa",
-    location: "Yaoundé, Cameroun",
+    location: "Kinshasa",
+    country: "RDC",
     rating: 4,
     date: "2025-03-10",
     category: "Produit",
     product: productName,
-    text: "Bon produit, livraison rapide. Je recommande.",
+    text: "Bon produit, correspond à la description. Je recommande.",
     initials: "JM",
   },
   {
     id: 3,
-    name: "Aïcha Aboubakar",
-    location: "Garoua, Cameroun",
+    name: "Aïssatou Diallo",
+    location: "Dakar",
+    country: "Sénégal",
     rating: 5,
     date: "2025-03-05",
     category: "Produit",
     product: productName,
-    text: "Parfait, correspond exactement à la description.",
-    initials: "AA",
+    text: "Parfait, conforme à mes attentes. Équipe très professionnelle.",
+    initials: "AD",
   },
 ];
 
@@ -68,7 +73,7 @@ export default function ProductReviews({ productName }: ProductReviewsProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {reviews.map((review, index) => (
           <CardReveal key={review.id} index={index} delay={200}>
-            <ReviewCard key={review.id} review={review} />
+            <ReviewCard review={review} />
           </CardReveal>
         ))}
       </div>

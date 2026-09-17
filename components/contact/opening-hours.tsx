@@ -7,7 +7,6 @@ import { LocalizedText } from "@/lib/translation";
 type Hub = {
   city: string;
   country: string;
-  flag: string;
   timezone: string; // fuseau IANA
   schedule: { day: string; hours: string; }[];
 };
@@ -16,7 +15,6 @@ const HUBS: Hub[] = [
   {
     city: "Shanghai",
     country: "Chine",
-    flag: "🇨🇳",
     timezone: "Asia/Shanghai",
     schedule: [
       { day: "Lundi", hours: "09:00 - 18:00" },
@@ -31,7 +29,6 @@ const HUBS: Hub[] = [
   {
     city: "Dubaï",
     country: "Émirats Arabes Unis",
-    flag: "🇦🇪",
     timezone: "Asia/Dubai",
     schedule: [
       { day: "Lundi", hours: "09:00 - 18:00" },
@@ -135,9 +132,6 @@ export default function OpeningHours() {
               {/* En-tête du hub */}
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2 min-w-0">
-                  <span className="text-xl shrink-0" aria-hidden="true">
-                    {hub.flag}
-                  </span>
                   <div className="min-w-0">
                     <p className="font-semibold text-text text-sm truncate">
                       <LocalizedText>{hub.city}</LocalizedText>

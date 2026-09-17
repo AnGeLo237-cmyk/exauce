@@ -176,7 +176,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.9,
     description: "Mercedes-AMG GLE 53 version européenne. Véhicule neuf (0 km). Toit panoramique, MBUX, caméra 360°.",
     specifications: { Année: "2023", Kilométrage: "0 km", Carburant: "Essence", Moteur: "3.0L Turbo 435 ch", "Boîte de vitesse": "Automatique 4MATIC+", Couleur: "Noir" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-02-01",
+    stock: 16, brand: "Mercedes-Benz", createdAt: "2025-02-01",
   },
   // 2. Toyota 4Runner SR5
   {
@@ -187,7 +187,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Toyota 4Runner SR5 robuste et fiable. Idéal pour les longs trajets et terrains difficiles.",
     specifications: { Année: "2021", Kilométrage: "45 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Toyota", createdAt: "2025-02-10",
+    stock: 19, brand: "Toyota", createdAt: "2025-02-10",
   },
   // 3. Hyundai Grandeur
   {
@@ -198,7 +198,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Hyundai Grandeur importé de Corée du Sud. Excellent état, sellerie cuir.",
     specifications: { Année: "2020", Kilométrage: "319 000 km", Carburant: "GPL (LPi)", Moteur: "3.0L", "Boîte de vitesse": "Automatique Tiptronic", Couleur: "Noir" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-03-15",
+    stock: 8, brand: "Hyundai", createdAt: "2025-03-15",
   },
   // 4. Hyundai Santa Fe 2013
   {
@@ -209,7 +209,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.2,
     description: "Hyundai Santa Fe 2013 — Confort, puissance & élégance. Véhicule contrôlé.",
     specifications: { Année: "2013", Kilométrage: "180 000 km", Carburant: "Diesel", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-04-01",
+    stock: 10, brand: "Hyundai", createdAt: "2025-04-01",
   },
   // 5. Kia Sportage
   {
@@ -220,7 +220,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Kia Sportage moderne avec écran tactile et caméra de recul.",
     specifications: { Année: "2023", Kilométrage: "18 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 2, brand: "Kia", createdAt: "2025-06-10",
+    stock: 24, brand: "Kia", createdAt: "2025-06-10",
   },
   // 6. Mazda CX5 (ajusté : suppression du tiret pour correspondre au dossier mazda-cx5)
   {
@@ -231,7 +231,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Mazda CX-5 – Design raffiné et conduite dynamique.",
     specifications: { Année: "2022", Kilométrage: "25 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Bleu" },
-    stock: 1, brand: "Mazda", createdAt: "2025-06-20",
+    stock: 13, brand: "Mazda", createdAt: "2025-06-20",
   },
   // 7. Kia Sorento
   {
@@ -242,7 +242,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Kia Sorento – Grand SUV 7 places, idéal pour les familles nombreuses.",
     specifications: { Année: "2023", Kilométrage: "15 000 km", Carburant: "Diesel", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Kia", createdAt: "2025-09-01",
+    stock: 10, brand: "Kia", createdAt: "2025-09-01",
   },
   // 8. Kia Telluride
   {
@@ -253,7 +253,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Kia Telluride – Grand SUV 8 places. Luxe et espace exceptionnels.",
     specifications: { Année: "2022", Kilométrage: "20 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Kia", createdAt: "2025-11-25",
+    stock: 5, brand: "Kia", createdAt: "2025-11-25",
   },
   // 9. Toyota Camry
   {
@@ -264,7 +264,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Toyota Camry – Berline fiable et confortable.",
     specifications: { Année: "2022", Kilométrage: "28 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Toyota", createdAt: "2025-12-10",
+    stock: 15, brand: "Toyota", createdAt: "2025-12-10",
   },
   // 10. Honda Civic
   {
@@ -275,7 +275,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Honda Civic – Berline compacte dynamique et fiable.",
     specifications: { Année: "2023", Kilométrage: "12 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 2, brand: "Honda", createdAt: "2026-07-01",
+    stock: 22, brand: "Honda", createdAt: "2026-07-01",
   },
   // 11. Mazda3
   {
@@ -286,7 +286,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Mazda3 – Berline compacte au design premium et conduite sportive.",
     specifications: { Année: "2022", Kilométrage: "18 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Gris" },
-    stock: 1, brand: "Mazda", createdAt: "2026-07-05",
+    stock: 11, brand: "Mazda", createdAt: "2026-07-05",
   },
   // 12. Hyundai Tucson
   {
@@ -297,7 +297,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Hyundai Tucson – SUV compact moderne et bien équipé.",
     specifications: { Année: "2022", Kilométrage: "25 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Hyundai", createdAt: "2026-07-10",
+    stock: 14, brand: "Hyundai", createdAt: "2026-07-10",
   },
   // ----- NOUVEAUX PRODUITS (13 à 30) -----
   // 13. Mercedes-AMG GLE 53 2021
@@ -309,7 +309,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.8,
     description: "Mercedes-AMG GLE 53 version 2021. Performance et luxe réunis.",
     specifications: { Année: "2021", Kilométrage: "15 000 km", Carburant: "Essence", Moteur: "3.0L Turbo 435 ch", "Boîte de vitesse": "Automatique 4MATIC+", Couleur: "Gris" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-02-15",
+    stock: 18, brand: "Mercedes-Benz", createdAt: "2025-02-15",
   },
   // 14. Toyota C-HR 2021
   {
@@ -320,7 +320,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.3,
     description: "Toyota C-HR 2021 – Design, économie & technologie.",
     specifications: { Année: "2021", Kilométrage: "22 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Bleu" },
-    stock: 2, brand: "Toyota", createdAt: "2025-03-01",
+    stock: 20, brand: "Toyota", createdAt: "2025-03-01",
   },
   // 15. Toyota Corolla 2024
   {
@@ -331,7 +331,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Toyota Corolla 2024 – Modernité, fiabilité & économie.",
     specifications: { Année: "2024", Kilométrage: "12 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 2, brand: "Toyota", createdAt: "2025-03-20",
+    stock: 9, brand: "Toyota", createdAt: "2025-03-20",
   },
   // 16. Hyundai Elantra 2021
   {
@@ -342,7 +342,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.2,
     description: "Hyundai Elantra 2021 – Élégance, économie & confort.",
     specifications: { Année: "2021", Kilométrage: "30 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 2, brand: "Hyundai", createdAt: "2025-04-15",
+    stock: 28, brand: "Hyundai", createdAt: "2025-04-15",
   },
   // 17. Hyundai Veloster 2019
   {
@@ -353,7 +353,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.3,
     description: "Hyundai Veloster 2019 – Sportive, moderne & fiable.",
     specifications: { Année: "2019", Kilométrage: "35 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-05-01",
+    stock: 15, brand: "Hyundai", createdAt: "2025-05-01",
   },
   // 18. Hyundai Tucson 2021
   {
@@ -364,7 +364,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Hyundai Tucson 2021 – Full options, confort & fiabilité.",
     specifications: { Année: "2021", Kilométrage: "18 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-05-20",
+    stock: 15, brand: "Hyundai", createdAt: "2025-05-20",
   },
   // 19. Kia Sportage 2023 (modèle spécifique)
   {
@@ -375,7 +375,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Kia Sportage 2023 – Design, confort & technologie.",
     specifications: { Année: "2023", Kilométrage: "10 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Gris" },
-    stock: 2, brand: "Kia", createdAt: "2025-06-01",
+    stock: 27, brand: "Kia", createdAt: "2025-06-01",
   },
   // 20. Kia Telluride Xline (ajusté : suppression du tiret après X)
   {
@@ -386,7 +386,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Kia Telluride X-Line – Version sportive du grand SUV.",
     specifications: { Année: "2022", Kilométrage: "15 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Kia", createdAt: "2025-06-15",
+    stock: 13, brand: "Kia", createdAt: "2025-06-15",
   },
   // 21. Peugeot 2008 (ajusté : retrait de "GTL")
   {
@@ -397,7 +397,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.2,
     description: "Peugeot 2008 GTL 2017 – Le charme français à petit prix.",
     specifications: { Année: "2017", Kilométrage: "45 000 km", Carburant: "Essence", "Boîte de vitesse": "Manuelle", Couleur: "Blanc" },
-    stock: 1, brand: "Peugeot", createdAt: "2025-07-01",
+    stock: 15, brand: "Peugeot", createdAt: "2025-07-01",
   },
   // 22. Peugeot Traveller (ajusté : retrait de "VIP")
   {
@@ -408,7 +408,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Peugeot Traveller Business VIP 2024 – Confort et prestige.",
     specifications: { Année: "2024", Kilométrage: "8 000 km", Carburant: "Diesel", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Peugeot", createdAt: "2025-07-15",
+    stock: 17, brand: "Peugeot", createdAt: "2025-07-15",
   },
   // 23. Ram 1500 (ajusté : retrait de "TRX")
   {
@@ -419,7 +419,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.9,
     description: "Ram 1500 TRX Havoc Edition 2023 – Puissance et robustesse extrêmes.",
     specifications: { Année: "2023", Kilométrage: "5 000 km", Carburant: "Essence", Moteur: "6.2L V8", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 1, brand: "Ram", createdAt: "2025-08-01",
+    stock: 10, brand: "Ram", createdAt: "2025-08-01",
   },
   // 24. Jeep Grand Cherokee (ajusté : retrait de "High Altitude")
   {
@@ -430,7 +430,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Jeep Grand Cherokee High Altitude 2018 – Luxe, puissance & technologie.",
     specifications: { Année: "2018", Kilométrage: "25 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Jeep", createdAt: "2025-08-15",
+    stock: 5, brand: "Jeep", createdAt: "2025-08-15",
   },
   // 25. Lexus NX 250 (inchangé)
   {
@@ -441,7 +441,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Lexus NX 250 2023 – Luxe, technologie & performance.",
     specifications: { Année: "2023", Kilométrage: "12 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Lexus", createdAt: "2025-09-01",
+    stock: 4, brand: "Lexus", createdAt: "2025-09-01",
   },
   // 26. Lexus RX450h (inchangé)
   {
@@ -452,7 +452,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.8,
     description: "Lexus RX450h Executive 2020 – Luxe, puissance & économie hybride.",
     specifications: { Année: "2020", Kilométrage: "28 000 km", Carburant: "Hybride", "Boîte de vitesse": "Automatique", Couleur: "Gris" },
-    stock: 1, brand: "Lexus", createdAt: "2025-09-15",
+    stock: 18, brand: "Lexus", createdAt: "2025-09-15",
   },
   // 27. Mitsubishi Pajero Sport (inchangé)
   {
@@ -463,7 +463,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Mitsubishi Pajero 3.8 V6 2011 – Puissance, robustesse & confort.",
     specifications: { Année: "2011", Kilométrage: "55 000 km", Carburant: "Essence", Moteur: "3.8L V6", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Mitsubishi", createdAt: "2025-10-01",
+    stock: 19, brand: "Mitsubishi", createdAt: "2025-10-01",
   },
   // 28. JAC J7 (inchangé)
   {
@@ -474,7 +474,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.0,
     description: "JAC J7 – Berline compacte abordable et fiable.",
     specifications: { Année: "2021", Kilométrage: "20 000 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 2, brand: "JAC", createdAt: "2025-10-15",
+    stock: 20, brand: "JAC", createdAt: "2025-10-15",
   },
   // 29. Jetour Dashing (inchangé)
   {
@@ -485,7 +485,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Jetour Dashing 2025 – Full options, luxe & état neuf.",
     specifications: { Année: "2025", Kilométrage: "0 km", Carburant: "Essence", "Boîte de vitesse": "Automatique", Couleur: "Bleu" },
-    stock: 1, brand: "Jetour", createdAt: "2025-11-01",
+    stock: 12, brand: "Jetour", createdAt: "2025-11-01",
   },
   // 30. Toyota Coaster (inchangé)
   {
@@ -496,7 +496,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Toyota Coaster 2025 – Le minibus de référence pour le transport professionnel.",
     specifications: { Année: "2025", Kilométrage: "2 000 km", Carburant: "Diesel", "Boîte de vitesse": "Manuelle", Couleur: "Blanc" },
-    stock: 1, brand: "Toyota", createdAt: "2025-11-10",
+    stock: 18, brand: "Toyota", createdAt: "2025-11-10",
   },
   // 31. Changan Deepal S07
   {
@@ -507,7 +507,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.3,
     description: "Changan Deepal S07 – SUV électrique moderne et bien équipé.",
     specifications: { Année: "2024", Kilométrage: "8 000 km", Carburant: "Électrique", Moteur: "Moteur électrique", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Changan", createdAt: "2025-01-20",
+    stock: 14, brand: "Changan", createdAt: "2025-01-20",
   },
   // 32. Haval Jolion 1.5T 2021
   {
@@ -518,7 +518,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.2,
     description: "Haval Jolion 1.5T 2021 – Modernité, confort & technologie.",
     specifications: { Année: "2021", Kilométrage: "25 000 km", Carburant: "Essence", Moteur: "1.5L Turbo", "Boîte de vitesse": "Automatique", Couleur: "Gris" },
-    stock: 2, brand: "Haval", createdAt: "2025-01-25",
+    stock: 22, brand: "Haval", createdAt: "2025-01-25",
   },
   // 33. Hyundai Grandeur Hybrid
   {
@@ -529,7 +529,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Hyundai Grandeur Hybrid – Luxe, puissance & économie hybride.",
     specifications: { Année: "2022", Kilométrage: "18 000 km", Carburant: "Hybride", Moteur: "2.5L Hybrid", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-02-01",
+    stock: 11, brand: "Hyundai", createdAt: "2025-02-01",
   },
   // 34. Hyundai Santa Fe
   {
@@ -540,7 +540,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Hyundai Santa Fe – SUV familial confortable et fiable.",
     specifications: { Année: "2020", Kilométrage: "35 000 km", Carburant: "Essence", Moteur: "2.4L", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-02-05",
+    stock: 10, brand: "Hyundai", createdAt: "2025-02-05",
   },
   // 35. Jetour T1
   {
@@ -551,7 +551,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Jetour T1 1.5T 2026 – Modernité, technologie & performance.",
     specifications: { Année: "2026", Kilométrage: "5 000 km", Carburant: "Essence", Moteur: "1.5L Turbo", "Boîte de vitesse": "Automatique", Couleur: "Bleu" },
-    stock: 1, brand: "Jetour", createdAt: "2025-02-10",
+    stock: 16, brand: "Jetour", createdAt: "2025-02-10",
   },
   // 36. Jetour T1 PHEV
   {
@@ -562,7 +562,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Jetour T1 PHEV 2026 – Technologie, puissance & économie.",
     specifications: { Année: "2026", Kilométrage: "3 000 km", Carburant: "Hybride rechargeable", Moteur: "1.5L Turbo + électrique", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 1, brand: "Jetour", createdAt: "2025-02-15",
+    stock: 12, brand: "Jetour", createdAt: "2025-02-15",
   },
   // 37. Jetour T2
   {
@@ -573,7 +573,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.8,
     description: "Jetour T2 Travel+ 2025 – Luxe, aventure & performance.",
     specifications: { Année: "2025", Kilométrage: "2 000 km", Carburant: "Essence", Moteur: "2.0L Turbo", "Boîte de vitesse": "Automatique", Couleur: "Noir" },
-    stock: 1, brand: "Jetour", createdAt: "2025-02-20",
+    stock: 10, brand: "Jetour", createdAt: "2025-02-20",
   },
   // 38. Kia Pegas
   {
@@ -584,7 +584,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.0,
     description: "Kia Pegas 1.4 EX 2021 – Économique, fiable & prête à rouler.",
     specifications: { Année: "2021", Kilométrage: "28 000 km", Carburant: "Essence", Moteur: "1.4L", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 2, brand: "Kia", createdAt: "2025-03-01",
+    stock: 20, brand: "Kia", createdAt: "2025-03-01",
   },
   // 39. Mercedes-Benz A200
   {
@@ -595,7 +595,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.5,
     description: "Mercedes-Benz A200 2024 – Luxe, élégance & technologie.",
     specifications: { Année: "2024", Kilométrage: "10 000 km", Carburant: "Essence", Moteur: "1.3L Turbo", "Boîte de vitesse": "Automatique 7 vitesses", Couleur: "Gris" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-03-05",
+    stock: 10, brand: "Mercedes-Benz", createdAt: "2025-03-05",
   },
   // 40. Mercedes-Benz E220d
   {
@@ -606,7 +606,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Mercedes-Benz E220d Exclusive LWB 2022 – Luxe, élégance & confort absolu.",
     specifications: { Année: "2022", Kilométrage: "15 000 km", Carburant: "Diesel", Moteur: "2.0L Turbo Diesel", "Boîte de vitesse": "Automatique 9 vitesses", Couleur: "Noir" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-03-10",
+    stock: 17, brand: "Mercedes-Benz", createdAt: "2025-03-10",
   },
   // 41. Hyundai Tucson 2017
   {
@@ -617,7 +617,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.3,
     description: "Hyundai Tucson 2017 – Moderne, économique & confortable.",
     specifications: { Année: "2017", Kilométrage: "55 000 km", Carburant: "Essence", Moteur: "2.0L", "Boîte de vitesse": "Automatique", Couleur: "Gris" },
-    stock: 1, brand: "Hyundai", createdAt: "2025-04-01",
+    stock: 18, brand: "Hyundai", createdAt: "2025-04-01",
   },
   // 42. Mercedes-Benz ML 350
   {
@@ -628,7 +628,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.6,
     description: "Mercedes-Benz ML 350 2015 – Luxe, puissance & confort.",
     specifications: { Année: "2015", Kilométrage: "65 000 km", Carburant: "Essence", Moteur: "3.5L V6", "Boîte de vitesse": "Automatique 7 vitesses", Couleur: "Noir" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-04-05",
+    stock: 17, brand: "Mercedes-Benz", createdAt: "2025-04-05",
   },
   // 43. Mercedes-Benz ML 500
   {
@@ -639,7 +639,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.7,
     description: "Mercedes-Benz ML 500 4MATIC 2015 – Puissance, luxe & confort absolu.",
     specifications: { Année: "2015", Kilométrage: "50 000 km", Carburant: "Essence", Moteur: "4.7L V8", "Boîte de vitesse": "Automatique 7 vitesses", Couleur: "Blanc" },
-    stock: 1, brand: "Mercedes-Benz", createdAt: "2025-04-10",
+    stock: 19, brand: "Mercedes-Benz", createdAt: "2025-04-10",
   },
   // 44. Toyota Avensis
   {
@@ -650,7 +650,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.3,
     description: "Toyota Avensis – Berline fiable et confortable.",
     specifications: { Année: "2020", Kilométrage: "40 000 km", Carburant: "Diesel", Moteur: "2.0L D-4D", "Boîte de vitesse": "Manuelle", Couleur: "Gris" },
-    stock: 1, brand: "Toyota", createdAt: "2025-04-15",
+    stock: 13, brand: "Toyota", createdAt: "2025-04-15",
   },
   // 45. Haval Jolion
   {
@@ -661,7 +661,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.2,
     description: "Haval Jolion – SUV compact moderne et bien équipé.",
     specifications: { Année: "2022", Kilométrage: "20 000 km", Carburant: "Essence", Moteur: "1.5L Turbo", "Boîte de vitesse": "Automatique", Couleur: "Blanc" },
-    stock: 2, brand: "Haval", createdAt: "2025-04-20",
+    stock: 21, brand: "Haval", createdAt: "2025-04-20",
   },
   // 46. Mazda 3
   {
@@ -672,7 +672,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 4.4,
     description: "Mazda 3 Sport Hatchback Skyactiv 2017 – Sportive, fiable & économique.",
     specifications: { Année: "2017", Kilométrage: "30 000 km", Carburant: "Essence", Moteur: "2.0L Skyactiv", "Boîte de vitesse": "Automatique", Couleur: "Rouge" },
-    stock: 1, brand: "Mazda", createdAt: "2025-04-25",
+    stock: 16, brand: "Mazda", createdAt: "2025-04-25",
   },
   // 47. Série spéciale petit budget
   {
@@ -683,7 +683,7 @@ export const rawProductsData: Omit<Product, "images">[] = [
     rating: 3.9,
     description: "Série spéciale petit budget – Hyundai Accent 2019 & Hyundai Elantra 2020.",
     specifications: { Année: "2019", Kilométrage: "50 000 km", Carburant: "Essence", Moteur: "1.6L", "Boîte de vitesse": "Manuelle", Couleur: "Blanc" },
-    stock: 3, brand: "Hyundai", createdAt: "2025-05-01",
+    stock: 8, brand: "Hyundai", createdAt: "2025-05-01",
   },
 ];
 

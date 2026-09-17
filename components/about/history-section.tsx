@@ -7,8 +7,8 @@ import { FadeIn } from "../shared/ux/animations";
 // Jalons chronologiques
 const milestones = [
   { year: "2022", text: "Création de l'entreprise à Shanghai (Chine)" },
-  { year: "2023", text: "Ouverture d'une boutique principale à Dubaï (EAU)" },
-  { year: "2024", text: "Extension des ventes à 12 pays d'Afrique et de la Caraïbe" },
+  { year: "2023", text: "Ouverture d'une boutique et déplacement du siège social à Dubaï (EAU)" },
+  { year: "2024", text: "Extension des ventes aux pays d'Afrique et de la Caraïbe" },
   { year: "2025", text: "Renforcement des partenariats avec les fournisseurs turcs" },
 ];
 
@@ -17,14 +17,12 @@ const hubs = [
   {
     city: "Shanghai",
     country: "Chine",
-    role: "Siège & centre d'approvisionnement",
-    flag: "🇨🇳",
+    role: "Bureau logistique & centre d'approvisionnement",
   },
   {
     city: "Dubaï",
     country: "Émirats Arabes Unis",
-    role: "Hub logistique & commercial",
-    flag: "🇦🇪",
+    role: "Siège social & Bureau commercial",
   },
 ];
 
@@ -58,13 +56,13 @@ export default function HistorySection() {
             <p className="text-text-muted leading-relaxed">
               <LocalizedText>
                 Nous disposons de deux boutiques principales : Shanghai, notre
-                centre d'approvisionnement historique, et Dubaï, notre hub
-                logistique et commercial pour l'Afrique et la Caraïbe.
+                centre logistique et d'approvisionnement, et Dubaï, notre siège social
+                et bureau commercial pour l'Afrique et la Caraïbe.
               </LocalizedText>
             </p>
             <p className="text-text-muted leading-relaxed">
               <LocalizedText>
-                Depuis, nous avons étendu notre activité à 12 pays : Cameroun,
+                Depuis, nous avons étendu notre activité à 12 autres pays du monde : Cameroun,
                 RDC, Guinée Conakry, Congo Brazzaville, Gabon, Haïti, Sénégal,
                 Burkina Faso, Côte d'Ivoire, Tchad, Togo et Mali.
               </LocalizedText>
@@ -82,9 +80,6 @@ export default function HistorySection() {
                   }`}
                   style={{ transitionDelay: `${600 + index * 150}ms` }}
                 >
-                  <span className="text-2xl" aria-hidden="true">
-                    {hub.flag}
-                  </span>
                   <div>
                     <p className="font-semibold text-text text-sm">
                       <LocalizedText>{hub.city}</LocalizedText>
@@ -104,7 +99,7 @@ export default function HistorySection() {
         </FadeIn>
 
         {/* Colonne chronologie */}
-        <div className="flex-1">
+        <div className="flex">
           <ul className="space-y-4">
             {milestones.map((item, index) => (
               <li

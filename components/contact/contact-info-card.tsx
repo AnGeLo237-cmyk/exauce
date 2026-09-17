@@ -1,6 +1,7 @@
 "use client";
 
 import { LocalizedText } from "@/lib/translation";
+import { BounceIn, FadeIn } from "../shared/ux/animations";
 
 // Icônes SVG internes
 const Icons = {
@@ -39,18 +40,16 @@ const HUBS = [
   {
     city: "Shanghai",
     country: "Chine",
-    role: "Siège & centre d'approvisionnement",
-    address: "Pudong New Area, Shanghai",
-    phone: "+86 21 6888 8888",
+    role: "Centre logistique & d'approvisionnement",
+    address: "Dans Delta du Yangtsé (Chine orientale)",
     hours: "Lun - Sam · 9h - 18h (CST)",
     accentColor: "from-red-500/20 to-red-500/0",
   },
   {
     city: "Dubaï",
     country: "Émirats Arabes Unis",
-    role: "Hub logistique & commercial",
-    address: "Business Bay, Dubaï",
-    phone: "+971 4 555 5555",
+    role: "Siège social & bureau commercial",
+    address: "Deira Street, dans la péninsule arabique (Moyen-Orient)",
     hours: "Dim - Ven · 9h - 18h (GST)",
     accentColor: "from-amber-500/20 to-amber-500/0",
   },
@@ -66,161 +65,153 @@ const GLOBAL_CONTACTS = {
 export default function ContactInfoCard() {
   return (
     <div className="space-y-5">
-      {/* Bandeau contacts globaux */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-secondary text-white p-6 shadow-lg">
-        {/* Motif décoratif */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white blur-3xl" />
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-white blur-3xl" />
-        </div>
-
-        <div className="relative">
-          <div className="flex items-center gap-2 mb-5">
-            <div className="w-1 h-6 bg-white/60 rounded-full" />
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white/80">
-              <LocalizedText>Contact direct</LocalizedText>
-            </h3>
+      <BounceIn delay={100}>
+        {/* Bandeau contacts globaux */}
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary to-secondary text-white p-6 shadow-lg">
+          {/* Motif décoratif */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none">
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 w-32 h-32 rounded-full bg-white blur-3xl" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {/* Email */}
-            <a
-              href={`mailto:${GLOBAL_CONTACTS.email}`}
-              className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/15 transition-all hover:-translate-y-0.5"
-            >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
-                {Icons.email("w-4 h-4")}
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
-                  <LocalizedText>Email</LocalizedText>
-                </p>
-                <p className="text-xs text-white font-medium truncate group-hover:text-white">
-                  {GLOBAL_CONTACTS.email}
-                </p>
-              </div>
-            </a>
-
-            {/* WhatsApp */}
-            <a
-              href={`https://wa.me/${GLOBAL_CONTACTS.whatsapp.replace(/[^0-9]/g, "")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/15 transition-all hover:-translate-y-0.5"
-            >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
-                {Icons.whatsapp("w-4 h-4")}
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
-                  <LocalizedText>WhatsApp</LocalizedText>
-                </p>
-                <p className="text-xs text-white font-medium truncate">
-                  {GLOBAL_CONTACTS.whatsapp}
-                </p>
-              </div>
-            </a>
-
-            {/* Numéro gratuit */}
-            <div className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
-                {Icons.phone("w-4 h-4")}
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
-                  <LocalizedText>Numéro gratuit</LocalizedText>
-                </p>
-                <p className="text-xs text-white font-medium truncate">
-                  {GLOBAL_CONTACTS.tollFree}
-                </p>
-              </div>
+          <div className="relative">
+            <div className="flex items-center gap-2 mb-5">
+              <div className="w-1 h-6 bg-white/60 rounded-full" />
+              <h3 className="text-xs font-bold uppercase tracking-widest text-white/80">
+                <LocalizedText>Contact direct</LocalizedText>
+              </h3>
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Titre hubs */}
-      <div className="flex items-center gap-3 px-1">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
-          {Icons.address("w-4 h-4")}
-        </div>
-        <div>
-          <h3 className="text-sm font-bold text-text uppercase tracking-wider">
-            <LocalizedText>Nos bureaux</LocalizedText>
-          </h3>
-          <p className="text-xs text-text-muted">
-            <LocalizedText>02 bureaux internationaux</LocalizedText>
-          </p>
-        </div>
-      </div>
-
-      {/* Hubs en cartes verticales */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {HUBS.map((hub) => (
-          <div
-            key={hub.city}
-            className="group relative overflow-hidden rounded-2xl bg-surface border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-          >
-            {/* Bandeau supérieur avec drapeau */}
-            <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-b ${hub.accentColor} pointer-events-none`} />
-
-            <div className="relative p-5">
-              {/* En-tête : drapeau + ville */}
-              <div className="flex items-center gap-3 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {/* Email */}
+              <a
+                href={`mailto:${GLOBAL_CONTACTS.email}`}
+                className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/15 transition-all hover:-translate-y-0.5"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
+                  {Icons.email("w-4 h-4")}
+                </div>
                 <div className="min-w-0">
-                  <h4 className="text-base font-bold text-text truncate">
-                    <LocalizedText>{hub.city}</LocalizedText>
-                  </h4>
-                  <p className="text-xs text-text-muted truncate">
-                    <LocalizedText>{hub.country}</LocalizedText>
+                  <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
+                    <LocalizedText>Adresse e-mail</LocalizedText>
+                  </p>
+                  <p className="text-xs text-white font-medium truncate group-hover:text-white">
+                    {GLOBAL_CONTACTS.email}
+                  </p>
+                </div>
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href={`https://wa.me/${GLOBAL_CONTACTS.whatsapp.replace(/[^0-9]/g, "")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/15 transition-all hover:-translate-y-0.5"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
+                  {Icons.whatsapp("w-4 h-4")}
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
+                    <LocalizedText>Contact WhatsApp</LocalizedText>
+                  </p>
+                  <p className="text-xs text-white font-medium truncate">
+                    {GLOBAL_CONTACTS.whatsapp}
+                  </p>
+                </div>
+              </a>
+
+              {/* Numéro gratuit */}
+              <div className="group flex flex-col gap-2 p-3 rounded-xl bg-white/5 border border-white/10">
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15 text-white">
+                  {Icons.phone("w-4 h-4")}
+                </div>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-wider text-white/60 font-semibold">
+                    <LocalizedText>Numéro de téléphone</LocalizedText>
+                  </p>
+                  <p className="text-xs text-white font-medium truncate">
+                    {GLOBAL_CONTACTS.tollFree}
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>        
+      </BounceIn>
 
-              {/* Rôle en badge */}
-              <div className="inline-block mb-4">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
-                  <LocalizedText>{hub.role}</LocalizedText>
-                </span>
+      <FadeIn delay={200}>
+        {/* Titre hubs */}
+        <div className="flex items-center gap-3 px-1">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
+            {Icons.address("w-4 h-4")}
+          </div>
+          <div>
+            <h3 className="text-sm font-bold text-text uppercase tracking-wider">
+              <LocalizedText>Nos bureaux</LocalizedText>
+            </h3>
+          </div>
+        </div>        
+      </FadeIn>
+
+      <FadeIn delay={300}>
+        {/* Hubs en cartes verticales */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {HUBS.map((hub) => (
+            <div
+              key={hub.city}
+              className="group relative overflow-hidden rounded-2xl bg-surface border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            >
+              {/* Bandeau supérieur avec drapeau */}
+              <div className={`absolute inset-x-0 top-0 h-24 bg-gradient-to-b ${hub.accentColor} pointer-events-none`} />
+
+              <div className="relative p-5">
+                {/* En-tête : drapeau + ville */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="min-w-0">
+                    <h4 className="text-base font-bold text-text truncate">
+                      <LocalizedText>{hub.city}</LocalizedText>
+                    </h4>
+                    <p className="text-xs text-text-muted truncate">
+                      <LocalizedText>{hub.country}</LocalizedText>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Rôle en badge */}
+                <div className="inline-block mb-4">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 px-2.5 py-1 rounded-full">
+                    <LocalizedText>{hub.role}</LocalizedText>
+                  </span>
+                </div>
+
+                {/* Détails */}
+                <ul className="space-y-2.5 text-sm">
+                  <li className="flex items-start gap-3">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-background border border-border text-text-muted shrink-0 mt-0.5">
+                      {Icons.address("w-3.5 h-3.5")}
+                    </span>
+                    <span className="text-text-muted leading-tight">
+                      <LocalizedText>{hub.address}</LocalizedText>
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-background border border-border text-text-muted shrink-0 mt-0.5">
+                      {Icons.clock("w-3.5 h-3.5")}
+                    </span>
+                    <span className="text-text-muted leading-tight">
+                      <LocalizedText>{hub.hours}</LocalizedText>
+                    </span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Détails */}
-              <ul className="space-y-2.5 text-sm">
-                <li className="flex items-start gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-background border border-border text-text-muted shrink-0 mt-0.5">
-                    {Icons.address("w-3.5 h-3.5")}
-                  </span>
-                  <span className="text-text-muted leading-tight">
-                    <LocalizedText>{hub.address}</LocalizedText>
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-background border border-border text-text-muted shrink-0 mt-0.5">
-                    {Icons.phone("w-3.5 h-3.5")}
-                  </span>
-                  <a
-                    href={`tel:${hub.phone.replace(/\s/g, "")}`}
-                    className="text-primary hover:text-primary-hover font-medium leading-tight transition-colors"
-                  >
-                    {hub.phone}
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-background border border-border text-text-muted shrink-0 mt-0.5">
-                    {Icons.clock("w-3.5 h-3.5")}
-                  </span>
-                  <span className="text-text-muted leading-tight">
-                    <LocalizedText>{hub.hours}</LocalizedText>
-                  </span>
-                </li>
-              </ul>
+              {/* Barre inférieure décorative */}
+              <div className="h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
             </div>
-
-            {/* Barre inférieure décorative */}
-            <div className="h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </FadeIn>
     </div>
   );
 }

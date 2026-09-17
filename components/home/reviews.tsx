@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { LocalizedText } from "@/lib/translation";
-import StarRating from "@/components/shared/ui/star-rating";
 import ReviewCard from "@/components/shared/ui/review-card";
 
 // ------------------------------
@@ -21,41 +20,93 @@ const ChevronRight = ({ className }: { className?: string }) => (
 );
 
 // ------------------------------
-// Données des avis (enrichies pour correspondre au type attendu par ReviewCard)
+// Données des avis (7 avis — contexte international)
+// Compatibles avec le type attendu par ReviewCard (location + country)
 // ------------------------------
 const reviews = [
   {
     id: 1,
     name: "Kenfack Jean",
-    location: "Douala, Littoral",
+    location: "Douala",
+    country: "Cameroun",
     rating: 5,
     date: "15 janvier 2025",
-    category: "Mobilier",
+    category: "Meuble",
     product: "Canapé Chesterfield",
-    text: "J'ai acheté un canapé Chesterfield, la qualité est exceptionnelle et la livraison a été rapide. Je recommande vivement !",
+    text: "J'ai commandé un canapé Chesterfield importé de Chine. La qualité est exceptionnelle et la livraison a été rapide. Je recommande vivement !",
     initials: "KJ",
   },
   {
     id: 2,
-    name: "Talla Emmanuel",
-    location: "Yaoundé, Centre",
-    rating: 4,
+    name: "Grâce Mbuyi",
+    location: "Kinshasa",
+    country: "RDC",
+    rating: 5,
     date: "10 février 2025",
-    category: "Automobile",
-    product: "Toyota Prado",
-    text: "Très bon service client, la Toyota que j'ai commandée correspondait parfaitement à la description. Merci pour le professionnalisme.",
-    initials: "TE",
+    category: "Voiture",
+    product: "Toyota RAV4",
+    text: "Ma Toyota RAV4 est arrivée de Dubaï en parfait état. Service client impeccable, je referai appel à Exaucé sans hésiter.",
+    initials: "GM",
   },
   {
     id: 3,
-    name: "Njoya Aminatou",
-    location: "Garoua, Nord",
+    name: "Aïssatou Diallo",
+    location: "Dakar",
+    country: "Sénégal",
     rating: 5,
     date: "5 mars 2025",
     category: "Électroménager",
-    product: "Réfrigérateur Two Side",
-    text: "Le réfrigérateur est arrivé en parfait état, silencieux et économe. Le site est clair et la commande très simple.",
-    initials: "AK",
+    product: "Réfrigérateur Side-by-Side",
+    text: "Le réfrigérateur importé de Turquie est silencieux et très économe. Le site est clair, la commande simple et la livraison à Dakar a été respectée.",
+    initials: "AD",
+  },
+  {
+    id: 4,
+    name: "Kouassi Yao",
+    location: "Abidjan",
+    country: "Côte d'Ivoire",
+    rating: 4,
+    date: "18 mars 2025",
+    category: "Meuble",
+    product: "Canapé d'angle",
+    text: "Très satisfait du canapé d'angle importé de Chine. Bon rapport qualité-prix et équipe commerciale très réactive pour organiser la livraison à Abidjan.",
+    initials: "KY",
+  },
+  {
+    id: 5,
+    name: "Paul Nguema",
+    location: "Libreville",
+    country: "Gabon",
+    rating: 5,
+    date: "2 avril 2025",
+    category: "Voiture",
+    product: "Berline Élégance 2025",
+    text: "Ma berline importée de Turquie est magnifique, finition haut de gamme. Les démarches d'importation ont été gérées de bout en bout par l'équipe.",
+    initials: "PN",
+  },
+  {
+    id: 6,
+    name: "Mahamat Idriss",
+    location: "N'Djamena",
+    country: "Tchad",
+    rating: 5,
+    date: "20 avril 2025",
+    category: "Voiture",
+    product: "SUV Premium X500",
+    text: "SUV robuste, parfait pour les routes du Tchad. Livraison depuis Dubaï en 3 semaines comme annoncé. Vraiment professionnel.",
+    initials: "MI",
+  },
+  {
+    id: 7,
+    name: "Amadou Coulibaly",
+    location: "Bamako",
+    country: "Mali",
+    rating: 4,
+    date: "12 mai 2025",
+    category: "Électroménager",
+    product: "Four encastrable",
+    text: "Four encastrable de bonne qualité, importé de Chine. Petit délai supplémentaire à la douane mais équipe très communicative. Je recommande.",
+    initials: "AC",
   },
 ];
 

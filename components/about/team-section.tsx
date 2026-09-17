@@ -10,12 +10,12 @@ import { LocalizedText } from "@/lib/translation";
 const teamMembers = [
   // Direction
   {
-    name: "M. Emmanuel Ngo Bassong",
+    name: "M. Amidou Nabaloum",
     role: "Directeur Général",
     department: "Direction",
     location: "Shanghai",
     flag: "🇨🇳",
-    photo: "/images/staff/emmanuel-ngo-bassong.jpg",
+    photo: "/images/staff/staff-1.jpg",
     quote: "Notre mission est de rendre l'excellence accessible à tous.",
   },
   // Opérations Chine
@@ -25,7 +25,7 @@ const teamMembers = [
     department: "Opérations Chine",
     location: "Shanghai",
     flag: "🇨🇳",
-    photo: "/images/staff/li-wei.jpg",
+    photo: "/images/staff/staff-2.jpg",
     quote: "Nous sélectionnons chaque fournisseur avec la plus grande rigueur.",
   },
   {
@@ -34,7 +34,7 @@ const teamMembers = [
     department: "Qualité",
     location: "Shanghai",
     flag: "🇨🇳",
-    photo: "/images/staff/chen-hao.jpg",
+    photo: "/images/staff/staff-3.jpg",
     quote: "Aucun produit ne quitte Shanghai sans un contrôle minutieux.",
   },
   // Opérations Dubaï
@@ -44,7 +44,7 @@ const teamMembers = [
     department: "Opérations Dubaï",
     location: "Dubaï",
     flag: "🇦🇪",
-    photo: "/images/staff/ahmed-al-mansouri.jpg",
+    photo: "/images/staff/staff-4.jpg",
     quote: "Notre hub de Dubaï est la plaque tournante vers l'Afrique et la Caraïbe.",
   },
   {
@@ -53,7 +53,7 @@ const teamMembers = [
     department: "Logistique",
     location: "Dubaï",
     flag: "🇦🇪",
-    photo: "/images/staff/fatima-al-zahra.jpg",
+    photo: "/images/staff/staff-6.jpg",
     quote: "Chaque expédition est suivie de bout en bout jusqu'à votre porte.",
   },
   // Achats Turquie
@@ -63,7 +63,7 @@ const teamMembers = [
     department: "Achats Internationaux",
     location: "Istanbul",
     flag: "🇹🇷",
-    photo: "/images/staff/mehmet-yilmaz.jpg",
+    photo: "/images/staff/staff-5.jpg",
     quote: "Nos partenariats turcs garantissent des produits authentiques et durables.",
   },
   // Commercial Afrique
@@ -73,7 +73,7 @@ const teamMembers = [
     department: "Commercial",
     location: "Douala",
     flag: "🇨🇲",
-    photo: "/images/staff/clarisse-abena.jpg",
+    photo: "/images/staff/staff-8.jpg",
     quote: "Chaque client mérite une écoute attentive et une offre sur mesure.",
   },
   {
@@ -82,7 +82,7 @@ const teamMembers = [
     department: "Service Client",
     location: "Douala",
     flag: "🇨🇲",
-    photo: "/images/staff/serge-owona.jpg",
+    photo: "/images/staff/staff-7.jpg",
     quote: "Nous accompagnons nos clients dans toute l'Afrique et la Caraïbe.",
   },
   // SAV
@@ -92,7 +92,7 @@ const teamMembers = [
     department: "SAV",
     location: "Douala",
     flag: "🇨🇲",
-    photo: "/images/staff/patricia-mbarga.jpg",
+    photo: "/images/staff/staff-10.jpg",
     quote: "Nous restons à vos côtés bien après l'achat, dans chaque pays.",
   },
   // Finance
@@ -102,7 +102,7 @@ const teamMembers = [
     department: "Finance",
     location: "Dubaï",
     flag: "🇦🇪",
-    photo: "/images/staff/thomas-ndzana.jpg",
+    photo: "/images/staff/staff-9.jpg",
     quote: "Des transactions transparentes et sécurisées, du devis à la livraison.",
   },
 ];

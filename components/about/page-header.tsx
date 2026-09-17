@@ -3,13 +3,6 @@
 import { useEffect, useState } from "react";
 import { LocalizedText } from "@/lib/translation";
 
-// Points clés à mettre en avant (badges)
-const highlights = [
-  { icon: "🌏", label: "Shanghai • Dubaï" },
-  { icon: "📦", label: "Chine & Turquie" },
-  { icon: "🌍", label: "12 pays desservis" },
-];
-
 export default function PageHeader() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,22 +33,6 @@ export default function PageHeader() {
             satisfaction, depuis Shanghai jusqu'à votre porte.
           </LocalizedText>
         </p>
-
-        {/* Badges de positionnement international */}
-        <div className="flex flex-wrap gap-3">
-          {highlights.map((item, index) => (
-            <span
-              key={index}
-              className={`inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 px-4 py-1.5 text-sm font-medium text-white transition-all duration-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-              }`}
-              style={{ transitionDelay: `${300 + index * 150}ms` }}
-            >
-              <span aria-hidden="true">{item.icon}</span>
-              <LocalizedText>{item.label}</LocalizedText>
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   );

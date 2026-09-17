@@ -3,7 +3,6 @@
 import { LocalizedText } from "@/lib/translation";
 import ContactInfoCard from "@/components/contact/contact-info-card";
 import ContactForm from "@/components/contact/contact-form";
-import MapEmbed from "@/components/contact/map-embed";
 import OpeningHours from "@/components/contact/opening-hours";
 import { FadeIn } from "@/components/shared/ux/animations";
 
@@ -24,45 +23,28 @@ export default function ContactPage() {
                 plus brefs délais, où que vous soyez en Afrique ou dans la Caraïbe.
               </LocalizedText>
             </p>
-
-            {/* Badges d'ancrage */}
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              {[
-                { city: "Shanghai" },
-                { city: "Dubaï" },
-                { city: "12 pays desservis" },
-              ].map((badge) => (
-                <span
-                  key={badge.city}
-                  className="inline-flex items-center gap-2 rounded-full bg-surface border border-border px-4 py-1.5 text-sm text-text"
-                >
-                  <span className="font-medium">{badge.city}</span>
-                </span>
-              ))}
-            </div>
           </div>
         </FadeIn>
 
         {/* Coordonnées et hubs */}
-        <FadeIn delay={100}>
+        <FadeIn delay={200}>
           <div className="mb-12">
             <ContactInfoCard />
           </div>
         </FadeIn>
 
         {/* Formulaire + Carte + Horaires */}
-        <FadeIn delay={200}>
+        <FadeIn delay={300}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             <ContactForm />
             <div className="space-y-8">
-              <MapEmbed />
               <OpeningHours />
             </div>
           </div>
         </FadeIn>
 
         {/* Bloc d'appel à l'action final */}
-        <FadeIn delay={300}>
+        <FadeIn delay={400}>
           <div className="mt-12 text-center bg-surface border border-border rounded-lg p-6">
             <h3 className="text-lg font-semibold text-text mb-2">
               <LocalizedText>Prêt à commander depuis votre pays ?</LocalizedText>

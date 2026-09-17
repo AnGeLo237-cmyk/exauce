@@ -404,3 +404,56 @@ export function CardReveal({
     </div>
   );
 }
+
+// ==================================================================
+// 8. AnimatedSection — Conteneur générique pour animer une section entière
+// ==================================================================
+/**
+ * QUAND L'UTILISER :
+ *  - Pour animer une section complète (titre + contenu + cartes).
+ *  - Sur les pages où plusieurs sections se succèdent au scroll.
+ *  - Permet de centraliser un effet d'apparition uniforme.
+ *
+ * DIFFÉRENCE avec FadeIn :
+ *  - FadeIn est destiné à un petit bloc de contenu.
+ *  - AnimatedSection est destiné à une section `<section>` entière
+ *    et applique un mouvement vertical plus prononcé (40px vs 20px).
+ *
+ * PROPS :
+ *  - children : la section à animer (généralement un composant entier).
+ *  - delay    : délai en millisecondes avant le début de l'animation.
+ *  - threshold: pourcentage de visibilité requis pour déclencher l'animation.
+ *  - className: classes supplémentaires (marges, espacements…).
+ *
+ * EXEMPLES :
+ *   // Dans une page d'accueil
+ *   <AnimatedSection delay={100}>
+ *     <Categories />
+ *   </AnimatedSection>
+ *
+ *   // Avec un seuil plus élevé pour les sections basses de page
+ *   <AnimatedSection delay={200} threshold={0.2}>
+ *     <Reviews />
+ *   </AnimatedSection>
+ */
+export function AnimatedSection({
+  children,
+  delay = 0,
+  threshold = 0.15,
+  className = "",
+}: AnimationProps) {
+  const { ref, isVisible } = useInView({ threshold });
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ease-out ${className}`}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translateY(0)" : "translateY(40px)",
+        transitionDelay: `${delay}ms`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
