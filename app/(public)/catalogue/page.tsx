@@ -9,7 +9,7 @@ import SortDropdown, { SortOption } from "@/components/catalog/sort-dropdown";
 import ProductGrid from "@/components/catalog/product-grid";
 import Pagination from "@/components/shared/ui/pagination";
 import EmptyState from "@/components/shared/ui/empty-state";
-import { SlideLeft, ZoomIn, SlideUp, SlideRight, BounceIn, FadeIn, CardReveal } from "@/components/shared/ux/animations";
+import { SlideLeft, BounceIn, FadeIn } from "@/components/shared/ux/animations";
 
 const ITEMS_PER_PAGE = 12;
 
@@ -156,7 +156,7 @@ export default function CataloguePage() {
         </FadeIn>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          <SlideLeft><FilterSidebar filters={filters} onChange={setFilters}/></SlideLeft>
+          <FilterSidebar filters={filters} onChange={setFilters}/>
           <div className="flex-1">
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
