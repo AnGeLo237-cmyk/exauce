@@ -246,18 +246,6 @@ export default function TeamSection() {
                     </div>
                   )}
 
-                  {/* Badge département + localisation */}
-                  <div
-                    className={`absolute top-4 left-4 flex items-center gap-1 text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded transition-all duration-500 z-20 ${
-                      isCenter
-                        ? "bg-primary/10 text-primary"
-                        : "bg-border/40 text-text-muted"
-                    }`}
-                  >
-                    <span aria-hidden="true">{member.flag}</span>
-                    <LocalizedText>{member.location}</LocalizedText>
-                  </div>
-
                   {/* Photo / Avatar */}
                   <div
                     className={`relative flex-shrink-0 w-32 h-32 md:w-36 md:h-36 rounded-full overflow-hidden border-4 transition-all duration-700 mt-6 ${
